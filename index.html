@@ -1,52 +1,140 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Happy Valentine ❤️</title>
+<title>Our Cute Little World 💕</title>
+
 <style>
 body {
-  background: linear-gradient(to right, #ff9a9e, #fad0c4);
+  margin: 0;
+  font-family: Comic Sans MS, cursive;
+  background: linear-gradient(to right, #ff9a9e, #fecfef);
   text-align: center;
-  font-family: Arial, sans-serif;
-}
-h1 {
-  margin-top: 100px;
   color: white;
-  font-size: 40px;
+  overflow-x: hidden;
 }
-button {
-  padding: 12px 25px;
+
+/* Navbar */
+.navbar {
+  background-color: rgba(255,255,255,0.2);
+  padding: 15px;
+}
+.navbar a {
+  color: white;
+  margin: 15px;
+  text-decoration: none;
+  font-weight: bold;
   font-size: 18px;
+}
+.navbar a:hover {
+  text-decoration: underline;
+}
+
+/* Sections */
+.section {
+  padding: 80px 20px;
+}
+
+h1 {
+  font-size: 45px;
+}
+
+p {
+  max-width: 700px;
+  margin: auto;
+  font-size: 20px;
+  line-height: 1.8;
+}
+
+/* Button */
+button {
+  padding: 12px 30px;
+  font-size: 18px;
+  border: none;
+  border-radius: 25px;
   background-color: white;
   color: #ff4b5c;
-  border: none;
-  border-radius: 20px;
   cursor: pointer;
+  margin-top: 25px;
 }
 button:hover {
   background-color: #ff4b5c;
   color: white;
 }
-#message {
-  margin-top: 20px;
-  font-size: 22px;
-  color: white;
+
+/* Floating hearts */
+.heart {
+  position: fixed;
+  bottom: -10px;
+  font-size: 20px;
+  animation: float 6s linear infinite;
+}
+@keyframes float {
+  0% { transform: translateY(0); opacity: 1; }
+  100% { transform: translateY(-100vh); opacity: 0; }
 }
 </style>
 </head>
 
 <body>
 
-<h1>Will You Be My Valentine? 💖</h1>
+<!-- Background Music -->
+<audio autoplay loop>
+  <source src="song.mp3" type="audio/mpeg">
+</audio>
 
-<button onclick="showMessage()">Click Here ❤️</button>
+<div class="navbar">
+  <a href="index.html">Home 💖</a>
+  <a href="about.html">Us 🌸</a>
+  <a href="love.html">Love Letter 💌</a>
+  <a href="proposal.html">Proposal 💍</a>
+</div>
 
-<p id="message"></p>
+<div class="section">
+  <h1>Welcome To Our Cute Little World 💕</h1>
+  <p>
+    This is not just a website.  
+    This is our tiny universe.  
+    A place where our silly fights, late night talks, random laughs,  
+    and soft “I miss you” moments live forever.  
+
+    I made this because you matter.  
+    Because what we have feels special.  
+    Because I wanted something that stays.
+  </p>
+
+  <a href="about.html">
+    <button>Let's Go Inside ✨</button>
+  </a>
+</div>
+
+<div class="section">
+  <h1>Why This Exists? 🥺</h1>
+  <p>
+    Because I overthink.  
+    Because I care too much.  
+    Because you are not ordinary to me.  
+
+    You are the person I want to tell everything to.  
+    The one whose notification makes me smile.  
+    The one I want to annoy forever.  
+    The one I want to protect.  
+
+    And maybe…  
+    the one I want beside me for a very long time.
+  </p>
+</div>
 
 <script>
-function showMessage() {
-  document.getElementById("message").innerHTML =
-  "You are the most special person in my life ❤️";
+function createHeart() {
+  const heart = document.createElement("div");
+  heart.className = "heart";
+  heart.innerHTML = "💖";
+  heart.style.left = Math.random() * 100 + "vw";
+  heart.style.fontSize = Math.random() * 25 + 15 + "px";
+  document.body.appendChild(heart);
+  setTimeout(() => { heart.remove(); }, 6000);
 }
+setInterval(createHeart, 400);
 </script>
 
 </body>
