@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Final Question 💍</title>
+
+<style>
+body {
+  margin: 0;
+  font-family: Comic Sans MS, cursive;
+  background: linear-gradient(to right, #ff758c, #ff7eb3);
+  text-align: center;
+  color: white;
+  margin-top: 150px;
+}
+
+h1 {
+  font-size: 40px;
+}
+
+button {
+  padding: 12px 25px;
+  font-size: 18px;
+  margin: 15px;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+}
+
+.yes {
+  background-color: white;
+  color: #ff4b5c;
+}
+
+.no {
+  background-color: #ff4b5c;
+  color: white;
+}
+</style>
+</head>
+<body>
+
+<h1>Will You Be Mine Forever? 💖🥺</h1>
+
+<button class="yes" onclick="yes()">Yes Obviously 💕</button>
+<button class="no" onclick="moveNo(this)">No 😏</button>
+
+<p id="answer"></p>
+
+<script>
+function yes() {
+  document.getElementById("answer").innerHTML =
+  "YAYYYYY 💖 You just made me the happiest person alive!!!";
+}
+
+function moveNo(btn) {
+  btn.style.position = "absolute";
+  btn.style.left = Math.random() * 80 + "vw";
+  btn.style.top = Math.random() * 80 + "vh";
+}
+</script>
+
+</body>
+</html>
