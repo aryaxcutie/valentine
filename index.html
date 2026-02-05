@@ -148,4 +148,16 @@ setInterval(createHeart, 400);
   var music = document.getElementById("bgMusic");
   music.play();
 }
+ <button id="no">NO 😜</button>
+
+<script>
+const noBtn = document.getElementById("no");
+noBtn.onmouseover = () => {
+  noBtn.style.position = "absolute";
+  noBtn.style.left = Math.random() * 80 + "%";
+  noBtn.style.top = Math.random() * 80 + "%";
+};
+</script>
+ 
+  
   
